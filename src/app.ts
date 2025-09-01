@@ -17,12 +17,12 @@ import { subCategoryRouter } from "./routes/subcategoryRoutes";
 
 const app = express();
 
-app.use(
-    cors({
-        origin: "*", // allow all origins
-        credentials: true, // ⚠️ This won’t work with "*" (must specify domains for cookies/auth)
-    })
-);
+// app.use(
+//     cors({
+//         origin: "*", // allow all origins
+//         credentials: true, // ⚠️ This won’t work with "*" (must specify domains for cookies/auth)
+//     })
+// );
 
 
 app.use(express.json({ limit: "1mb" }));
