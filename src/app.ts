@@ -19,11 +19,11 @@ const app = express();
 
 app.use(
     cors({
-        credentials: true,
-        origin: ["http://localhost:5000", "http://localhost:5137", "http://localhost:5138"],
-        // origin: ["*"],
+        origin: "*", // allow all origins
+        credentials: true, // ⚠️ This won’t work with "*" (must specify domains for cookies/auth)
     })
 );
+
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true }));
